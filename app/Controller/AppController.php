@@ -33,5 +33,5 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
   public $components = array('DebugKit.Toolbar','Session'); // この行を追加
-	public $uses = array('User','UserProfile');
+	public $uses = array('User','Snippet','Category');
 }

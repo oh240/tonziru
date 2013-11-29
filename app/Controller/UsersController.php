@@ -31,40 +31,27 @@ App::uses('AppController', 'Controller');
  */
 class UsersController extends AppController {
 	
+	public function login() {
+		
+	}
+	
+	public function logout(){
+		
+	}
+	
 	public function index(){
-		# code
-		if ($this->request->is('post')) {
-			$data = $this->request->data['User']['name'];
-			$this->Session->write('Adddate',$data);
-			return $this->redirect('/users/url/');
-		}
-			
+
 	}
 	
 	public function add(){
 		# code...
 	}
 	
-	public function url(){
-		if ($this->request->is('post')) {
-			$data = $this->Session->read('Adddata');
-			$data['User']['url'] = $this->request->data['User']['url'];
-			//$this->Session->write('Adddate',$data);
-			return $this->redirect('/users/chose_design/');
-		}
-	}
-	
 	public function delete(){
 		# code...
 	}
 	
-	/*
-	public function chose_design(){
-		$data = $this->Session->read('Adddata');
-	}
-	*/
-	
-	public function view($value=''){
+	public function view(){
 	}
 }
 
