@@ -13,7 +13,7 @@ class SnippetsController extends AppController {
  *
  * @var array
  */
-	public $components = array('Paginator');
+	public $components = array('Paginator','RequestHandler');
 
 /**
  * index method
@@ -21,8 +21,19 @@ class SnippetsController extends AppController {
  * @return void
  */
 	public function index() {
+		$this->set('title_for_layout', 'トップ画面');
 		$this->Snippet->recursive = 0;
 		$this->set('snippets', $this->Paginator->paginate());
+		$categories = $this->Category->find('all');
+		$this->set(compact('categories'));
+	}
+
+	public function all() {
+		 $this->set('snippets', $this->Snippet->find('all'));
+     $this->set('_serialize', array('snippets'));
+	}
+
+	public function jssample() {
 		$categories = $this->Category->find('all');
 		$this->set(compact('categories'));
 	}

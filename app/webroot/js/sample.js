@@ -1,19 +1,19 @@
 $(function() {
-  return $('#ta').typeahead({
-    name: 'names',
-    local: ["斉藤", "斉木", "大野", "大原"],
-    limit: 10
+  $.getJSON("http://localhost:8888/tonziru/snippets/all.json" , function(data) {
+    //var obj = $(".list-group-item");
+    var dataLen = data['snippets'].length;
+    for (i=0;i<dataLen;i++) {
+        var id = data['snippets'][i]['Snippet']['id'];
+        var category = data['snippets'][i]['Category']['name'];
+        var title = data['snippets'][i]['Snippet']['title'];
+        var e = $(
+          '<a href="#" class="list-group-item" id="snippet_'+id+'"data-id="'+id+'">'+
+            '<span class="badge">'+category+"</span>"+
+            '<h5 class="list-group-item-heading">'+title+'</h5>'+
+          '</a>'
+        );
+      $('.list-group').append(e);
+    }
+
   });
 });
-
-/*
-$('.list-group-item').click(function(){
-	console.log("console");
-	$.getJSON("sample.json", function(data){
-		for(var i in data){
-      $(".codeview").append(data[i].division);
-    }
-	});	
-});
-
-*/

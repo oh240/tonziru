@@ -12,16 +12,7 @@
     </div><!-- /input-group -->
     <br>
 		<div class="list-group">
-		<?php foreach ($snippets as $snippet) :?>
-		 <a href="#" class="list-group-item" id="snippet_<?php echo $snippet['Snippet']['id'];?>" data-id="<?php echo $snippet['Snippet']['id'];?>">
-		 		<span class="badge">
-		 			<?php echo $snippet['Category']['name']; ?>
-		 		</span>
-		    <h5 class="list-group-item-heading">
-		    	<?php echo $snippet['Snippet']['title'];?>
-		    </h5>
-		  </a>
-			<?php endforeach ;?>
+
 		</div>
 	</div>
 
