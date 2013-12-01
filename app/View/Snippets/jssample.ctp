@@ -1,4 +1,3 @@
-	
 	<?php echo $this->element('menu');?>
 	<div class="leftContent pull-left">
 		<div class="input-group">
@@ -14,53 +13,44 @@
 		<div class="list-group">
 
 		</div>
+		<p class="pull-left">
+			<button class="btn btn-default Prev">
+				Prev
+			</button>
+		</p>
+		<p class="pull-right">
+			<button class="btn btn-default Next">
+				Next
+			</button>
+		</p>
+		<div class="clearfix"></div>
 	</div>
 
-<div class="rightContent pull-left well">
-		
-	<h2>すにぺっと１</h2>
-	<p class="pull-right">
-		<button class="btn btn-success">
-			Copy 
-			<span class="glyphicon glyphicon-paperclip"></span>
-		</button>
-		<button class="btn btn-default">
-				Edit
-				<span class="glyphicon glyphicon-edit"></span>
-		</button>
-	</p>		
-	<div class="clearfix"></div>
-	<pre class="codeview">
-		&lt;p&gt;Sample text here...&lt;/p&gt;
-		&lt;p&gt;Sample text here...&lt;/p&gt;
-		&lt;p&gt;Sample text here...&lt;/p&gt;
-		&lt;p&gt;Sample text here...&lt;/p&gt;
-		/*ここにコメントを記入しましょう*/
-	</pre>
-	<div>	
-				<span class="glyphicon glyphicon-tag"></span> Tags:
-	    	<span class="label label-primary">Html</span>
-	    	<span class="label label-primary">PHP</span>
-	    	<span class="label label-primary">日本語に対する対応技術</span>
-	    	<span class="label label-primary">Html</span>
-	    	<span class="label label-primary">PHP</span>
-	    	<span class="label label-primary">日本語に対する対応技術</span>
-	    	<span class="label label-primary">Html</span>
-	    	<span class="label label-primary">PHP</span>
-	    	<span class="label label-primary">日本語に対する対応技術</span>
-	</div>
+	<div class="rightContent pull-left well">
+			
+		<h3 class="snippetTitle">
+			
+		</h3>
+			<p class="pull-right">
+				<button class="btn btn-default">
+						Edit
+						<span class="glyphicon glyphicon-edit"></span>
+				</button>
+			</p>		
+			<div class="clearfix"></div>
+			<div class="codeArea">
+				<pre></pre>
+			</div>
+			<hr>
+		<div class="pull-right">
+			<button class="btn btn-success">
+				Copy 
+				<span class="glyphicon glyphicon-paperclip"></span>
+			</button>
+			<button class="btn btn-primary goods">
+			</button>
+			<button class="btn btn-danger bats">
+			</button>
+		</div>
 
-	<hr>
-
-	<div class="pull-right">
-		<button class="btn btn-danger">
-			Bat ... 
-			<span class="glyphicon glyphicon-thumbs-down"></span>
-		</button>
-		<button class="btn btn-primary">
-			Good !
-			<span class="glyphicon glyphicon-thumbs-up"></span>
-		</button>
-	</div>
-
-	</div>
+		</div>

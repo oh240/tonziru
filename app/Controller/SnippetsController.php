@@ -27,30 +27,11 @@ class SnippetsController extends AppController {
 		$categories = $this->Category->find('all');
 		$this->set(compact('categories'));
 	}
-
-	public function all() {
-		 $this->set('snippets', $this->Snippet->find('all'));
-     $this->set('_serialize', array('snippets'));
-	}
-
+	
 	public function jssample() {
+		$this->set('title_for_layout', 'トップ画面');
 		$categories = $this->Category->find('all');
 		$this->set(compact('categories'));
-	}
-
-/**
- * view method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
-	public function view($id = null) {
-		if (!$this->Snippet->exists($id)) {
-			throw new NotFoundException(__('Invalid snippet'));
-		}
-		$options = array('conditions' => array('Snippet.' . $this->Snippet->primaryKey => $id));
-		$this->set('snippet', $this->Snippet->find('first', $options));
 	}
 
 /**
