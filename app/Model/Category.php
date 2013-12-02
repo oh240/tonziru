@@ -17,4 +17,18 @@ class Category extends AppModel {
 		'Snippet'
 	);
 
+	function listAll() {
+
+		$categories = $this->find('all');
+
+		foreach ($categories as $category){
+			$categoryList[] = array(
+				'name'=> $category['Category']['name'],
+				'value'=> $category['Category']['id']
+			);
+		}
+		return $categoryList;
+	}
+
+
 }

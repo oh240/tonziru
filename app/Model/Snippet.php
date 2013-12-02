@@ -39,7 +39,7 @@ class Snippet extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 			'between' => array(
-				'rule' => array('between'),
+				'rule' => array('between',1,60),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,

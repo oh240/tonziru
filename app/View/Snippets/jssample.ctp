@@ -13,44 +13,45 @@
 		<div class="list-group">
 
 		</div>
-		<p class="pull-left">
-			<button class="btn btn-default Prev">
-				Prev
-			</button>
-		</p>
-		<p class="pull-right">
-			<button class="btn btn-default Next">
-				Next
-			</button>
-		</p>
+		<div class="page">	
+			<p class="pull-left preDiv">
+			</p>
+			<p class="pull-right nexDiv">
+			</p>
+		</div>
 		<div class="clearfix"></div>
 	</div>
 
-	<div class="rightContent pull-left well">
-			
+	<div class="rightContent pull-left">
 		<h3 class="snippetTitle">
-			
+		
 		</h3>
-			<p class="pull-right">
-				<button class="btn btn-default">
-						Edit
-						<span class="glyphicon glyphicon-edit"></span>
-				</button>
-			</p>		
+			<p class="pull-right editor">
+				<a href="#" class="btn btn-default" id="linker">
+					編集
+					<span class="glyphicon glyphicon-edit"></span>
+				</a>
+			</p>	
+		<div class="well">	
 			<div class="clearfix"></div>
 			<div class="codeArea">
 				<pre></pre>
 			</div>
 			<hr>
-		<div class="pull-right">
-			<button class="btn btn-success">
-				Copy 
-				<span class="glyphicon glyphicon-paperclip"></span>
-			</button>
-			<button class="btn btn-primary goods">
-			</button>
-			<button class="btn btn-danger bats">
-			</button>
+			<div class="pull-right">
+				<button class="btn btn-success">
+					Copy 
+					<span class="glyphicon glyphicon-paperclip"></span>
+				</button>
+				<button class="btn btn-primary goods">
+				</button>
+				<button class="btn btn-danger bats">
+				</button>
+			</div>
+			<div class="clearfix"></div>
 		</div>
+	</div>
 
-		</div>
+	<?php
+	 //echo $this->Html->script('sample',array('inline'=>'false'));
+	?>

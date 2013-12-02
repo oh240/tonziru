@@ -1,4 +1,3 @@
-	
 	<?php echo $this->element('menu');?>
 	<div class="leftContent pull-left">
 		<div class="input-group">
@@ -11,65 +10,61 @@
       </span>
     </div><!-- /input-group -->
     <br>
+    <?php echo $this->Html->link('新規追加',
+    			array(
+    				'controller'=>'snippets',
+    				'action'=>'add'
+    			),
+    			array(
+    				'class'=>'btn btn-success btn-lg btn-block'
+    			)
+    		);
+    ?>
+    <div class="clearfix"></div>
+    <br>
 		<div class="list-group">
-		<?php foreach ($snippets as $snippet) :?>
-		 <a href="#" class="list-group-item" id="snippet_<?php echo $snippet['Snippet']['id'];?>" data-id="<?php echo $snippet['Snippet']['id'];?>">
-		 		<span class="badge">
-		 			<?php echo $snippet['Category']['name']; ?>
-		 		</span>
-		    <h5 class="list-group-item-heading">
-		    	<?php echo $snippet['Snippet']['title'];?>
-		    </h5>
-		  </a>
-			<?php endforeach ;?>
+
+		</div>
+		<div class="page">	
+			<p class="pull-left preDiv">
+			</p>
+			<p class="pull-right nexDiv">
+			</p>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+
+	<div class="rightContent pull-left">
+		<h3 class="snippetTitle">
+		
+		</h3>
+			<p class="pull-right editor">
+				<a href="#" class="btn btn-default" id="linker">
+					編集
+					<span class="glyphicon glyphicon-edit"></span>
+				</a>
+			</p>	
+		<div class="well">	
+			<div class="clearfix"></div>
+			<div class="codeArea">
+				<pre class="code"></pre>
+			</div>
+			<hr>
+			<div class="pull-right">
+				<button class="btn btn-success">
+					Copy 
+					<span class="glyphicon glyphicon-paperclip"></span>
+				</button>
+				<button class="btn btn-primary goods">
+				</button>
+				<button class="btn btn-danger bats">
+				</button>
+			</div>
+			<div class="clearfix"></div>
 		</div>
 	</div>
-
-<div class="rightContent pull-left well">
-		
-	<h2>すにぺっと１</h2>
-	<p class="pull-right">
-		<button class="btn btn-success">
-			Copy 
-			<span class="glyphicon glyphicon-paperclip"></span>
-		</button>
-		<button class="btn btn-default">
-				Edit
-				<span class="glyphicon glyphicon-edit"></span>
-		</button>
-	</p>		
 	<div class="clearfix"></div>
-	<pre class="codeview">
-		&lt;p&gt;Sample text here...&lt;/p&gt;
-		&lt;p&gt;Sample text here...&lt;/p&gt;
-		&lt;p&gt;Sample text here...&lt;/p&gt;
-		&lt;p&gt;Sample text here...&lt;/p&gt;
-		/*ここにコメントを記入しましょう*/
-	</pre>
-	<div>	
-				<span class="glyphicon glyphicon-tag"></span> Tags:
-	    	<span class="label label-primary">Html</span>
-	    	<span class="label label-primary">PHP</span>
-	    	<span class="label label-primary">日本語に対する対応技術</span>
-	    	<span class="label label-primary">Html</span>
-	    	<span class="label label-primary">PHP</span>
-	    	<span class="label label-primary">日本語に対する対応技術</span>
-	    	<span class="label label-primary">Html</span>
-	    	<span class="label label-primary">PHP</span>
-	    	<span class="label label-primary">日本語に対する対応技術</span>
-	</div>
 
-	<hr>
-
-	<div class="pull-right">
-		<button class="btn btn-danger">
-			Bat ... 
-			<span class="glyphicon glyphicon-thumbs-down"></span>
-		</button>
-		<button class="btn btn-primary">
-			Good !
-			<span class="glyphicon glyphicon-thumbs-up"></span>
-		</button>
-	</div>
-
-	</div>
+	<?php
+	 //echo $this->Html->script('sample',array('inline'=>'false'));
+	?>

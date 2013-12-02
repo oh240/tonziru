@@ -31,17 +31,18 @@ class JsonController extends AppController {
 			'conditions' => array(
 					'Skill.user_id' => $user_id
 			),
-			'order' => array(
-				'Skill.created'=>'DESC'
-			),
 		*/
+			'order' => array(
+				'Snippet.modified'=>'DESC'
+			),
 			'limit'=>10
 		);
 		$this->viewClass = 'Json';
 
    $snippets = $this->paginate('Snippet');
-   $this->set(compact('snippets'));
-   $this->set('_serialize', array('snippets'));
+   $snippet_cnt = $this->Snippet->find('count');
+   $this->set(compact('snippets','snippet_cnt'));
+   $this->set('_serialize', array('snippets','snippet_cnt'));
 	}
 
 	public function search() {

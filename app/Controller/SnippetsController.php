@@ -22,24 +22,21 @@ class SnippetsController extends AppController {
  */
 	public function index() {
 		$this->set('title_for_layout', 'トップ画面');
-		$this->Snippet->recursive = 0;
-		$this->set('snippets', $this->Paginator->paginate());
 		$categories = $this->Category->find('all');
 		$this->set(compact('categories'));
 	}
-	
-	public function jssample() {
-		$this->set('title_for_layout', 'トップ画面');
-		$categories = $this->Category->find('all');
-		$this->set(compact('categories'));
-	}
-
 /**
  * add method
  *
  * @return void
  */
 	public function add() {
+
+		$this->set('title_for_layout', '新規スニペット追加');
+
+		$categoryList = $this->Category->listAll();
+		$this->set(compact('categoryList'));
+
 		if ($this->request->is('post')) {
 			$this->Snippet->create();
 			if ($this->Snippet->save($this->request->data)) {
@@ -59,9 +56,21 @@ class SnippetsController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+		$this->Snippet->id = $id;
 		if (!$this->Snippet->exists($id)) {
 			throw new NotFoundException(__('Invalid snippet'));
 		}
+
+		$options = array(
+			'conditions' => array(
+				'Snippet.id'=>$id
+			)
+		);
+		$categoryList = $this->Category->listAll();
+		$snippet = $this->Snippet->find('first',$options);
+		$this->set('title_for_layout',$snippet['Snippet']['title']);
+		$this->set(compact('snippet','categoryList'));
+
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Snippet->save($this->request->data)) {
 				$this->Session->setFlash(__('The snippet has been saved.'));

@@ -31,12 +31,19 @@ header {
 	width: 55%;
 }
 
-.rightContent h2{
+.rightContent h3{
 	margin-bottom: 20px;
 	margin-top: 0;
+	line-height: 140%; 
 }
 
 .menu {
 	margin: 0 auto;
 	width: 60%;
+}
+
+.titleInput {
+	font-weight: bold;
+	font-size:24px;
+  height:55px;
 }
