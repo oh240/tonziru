@@ -37,13 +37,49 @@ class JsonController extends AppController {
    $this->set('_serialize', array('snippets','snippet_cnt'));
 	}
 
-	public function search() {
-		 $this->set('snippets', $this->Snippet->find('all'));
-     $this->set('_serialize', array('snippets'));
+	public function search($keyword) {
+		
+  	$options = array(
+			'conditions' => array(
+					'Snippet.title LIKE'=> '%'.$keyword.'%'
+			),
+			'order' => array(
+				'Snippet.modified'=>'DESC'
+			),
+			'limit'=>10
+		);
+		
+		$this->Paginator->settings = $options;
+		$this->viewClass = 'Json';
+    
+		$snippets = $this->paginate('Snippet');
+    $snippet_cnt = $this->Snippet->find('count',$options);
+		
+    $this->set(compact('snippets','snippet_cnt'));
+    $this->set('_serialize', array('snippets','snippet_cnt'));
 	}
 	
-	public function category() {
+	
+	public function category($category_id = null) {
 		
+  	$options = array(
+			'conditions' => array(
+					'Snippet.category_id'=>$category_id
+			),
+			'order' => array(
+				'Snippet.modified'=>'DESC'
+			),
+			'limit'=>10
+		);
+		
+		$this->Paginator->settings = $options;
+		$this->viewClass = 'Json';
+    
+		$snippets = $this->paginate('Snippet');
+    $snippet_cnt = $this->Snippet->find('count',$options);
+		
+    $this->set(compact('snippets','snippet_cnt'));
+    $this->set('_serialize', array('snippets','snippet_cnt'));
 	}
-
+	
 }
