@@ -38,6 +38,7 @@
  */
 	CakePlugin::routes();
 	Router::parseExtensions('json');
+	Router::connect('/opauth-complete/*',array('controller' => 'users', 'action' => 'opauth_complete'));
 
 /**
  * Load the CakePHP default routes. Only remove this if you do not want to use

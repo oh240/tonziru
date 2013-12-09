@@ -20,7 +20,7 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 App::uses('AppController', 'Controller');
-
+App::uses('Sanitize', 'Utility');
 /**
  * Static content controller
  *
@@ -36,7 +36,7 @@ class UsersController extends AppController {
 	}
 	
 	public function logout(){
-		
+		$this->Auth->logout();
 	}
 	
 	public function index(){
@@ -52,6 +52,48 @@ class UsersController extends AppController {
 	}
 	
 	public function view(){
+		
 	}
+  
+	public function opauth_complete() {
+		
+		if ($this->data) {
+		 	$data = Sanitize::clean($this->data);
+			$options = array(
+									'conditions' => array(
+										'User.facebook_id' => $this->data['auth']['raw']['id']
+								)
+			);
+			
+			$user = $this->User->find('first',$options);
+			
+			if(!empty($user)) {
+				$this->logincheck($user['User']); 
+			} else {
+				//facebook_idがなければアカウントを新規登録
+				$this->User->create();
+				$savedata = array(
+					'name'=>$data['auth']['raw']['name'],
+					'facebook_id'=>$data['auth']['raw']['id'],
+				);
+				$this->User->save($savedata,false);
+				$user = $this->User->find('first',$options);
+			}
+			
+			$this->redirect('/snippets/');
+  	}
+	}
+	/*
+	private function logincheck($user = null) {
+    
+		if ($this->Auth->login($user)) {
+      $session_data = $this->Session->read('Auth');
+			$this->redirect('/snippets');
+    } else {
+      $this->Session->setFlash('ユーザー名かパスワードを間違えています!!');
+      $this->redirect('add');
+    }
+	}
+	*/
 }
 

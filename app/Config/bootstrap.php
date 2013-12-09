@@ -109,3 +109,21 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
+
+/**
+ * 認証用プラグイン
+ */
+CakePlugin::load('Opauth', array('routes' => true, 'bootstrap' => true));
+
+/**
+ * Facebook認証のためのstrategy
+ */ 
+Configure::write('Opauth.Strategy.Facebook', array(
+'app_id' => '510530838968620',
+'app_secret' => '951930b09b4a7c19a2d9e6c6f1a12026'
+));
+
+/**
+ * 認証用のURL設定
+ */
+Configure::write('Opauth.path', '/tonziru/auth/');
