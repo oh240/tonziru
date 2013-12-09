@@ -1,0 +1,418 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"sni",
+				"snippet"
+			],
+			[
+				"se",
+				"select"
+			],
+			[
+				"catego",
+				"categoryList"
+			],
+			[
+				"ca",
+				"Category"
+			],
+			[
+				"cate",
+				"categories"
+			],
+			[
+				"ht",
+				"html"
+			],
+			[
+				"cre",
+				"create"
+			],
+			[
+				"V",
+				"viewCnt"
+			],
+			[
+				"find",
+				"findCount"
+			],
+			[
+				"c",
+				"category"
+			],
+			[
+				"js",
+				"jsdata"
+			],
+			[
+				"listr",
+				"list-group-item"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"list",
+				"list-group-item"
+			],
+			[
+				"len",
+				"length"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"inle",
+				"inline"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"ei",
+				"edit_submit"
+			],
+			[
+				"edit",
+				"edit_input"
+			],
+			[
+				"creat",
+				"created"
+			],
+			[
+				"ord",
+				"order"
+			],
+			[
+				"skill",
+				"skill_id"
+			],
+			[
+				"ski",
+				"skill_id"
+			],
+			[
+				"el",
+				"element"
+			],
+			[
+				"need",
+				"needopt"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Applications/MAMP/htdocs/tonziru/app/View/Helper/AppHelper.php",
+		"/Applications/MAMP/htdocs/tonziru/app/Model/AppModel.php",
+		"/Applications/MAMP/htdocs/tonziru/app/Config/core.php",
+		"/Applications/MAMP/htdocs/tonziru/app/webroot/js/sample.js",
+		"/Applications/MAMP/htdocs/tonziru/app/Config/database.php",
+		"/Applications/MAMP/htdocs/ihav/app/Controller/PagesController.php",
+		"/Applications/MAMP/htdocs/ihav/app/Controller/QuestionsController.php",
+		"/Applications/MAMP/htdocs/ihav/app/Controller/SkillflowController.php",
+		"/Applications/MAMP/htdocs/ihav/app/Controller/SkillsController.php",
+		"/Applications/MAMP/htdocs/ihav/View/Offers/confirm.ctp",
+		"/Applications/MAMP/htdocs/ihav/View/Skills/view.ctp",
+		"/Applications/MAMP/htdocs/ihav/Model/Offer.php",
+		"/Applications/MAMP/htdocs/ihav/app/Controller/AppController.php",
+		"/Applications/MAMP/htdocs/ihav/Model/Need.php",
+		"/Applications/MAMP/htdocs/ihav/app/Controller/NeedsController.php",
+		"/Applications/MAMP/htdocs/ihav/Model/Option.php",
+		"/Applications/MAMP/htdocs/ihav/database_dump/table_dump.sql",
+		"/Applications/MAMP/htdocs/ihav/View/Needs/edit.ctp",
+		"/Applications/MAMP/htdocs/tonziru/init.sql",
+		"/Applications/MAMP/htdocs/tonziru/app/View/Layouts/default.ctp",
+		"/Applications/MAMP/htdocs/tonziru/app/View/Snippets/edit.ctp",
+		"/Applications/MAMP/htdocs/tonziru/app/webroot/css/style.css",
+		"/Applications/MAMP/htdocs/tonziru/app/View/Snippets/view.ctp",
+		"/Applications/MAMP/htdocs/tonziru/app/Controller/AppController.php",
+		"/Applications/MAMP/htdocs/tonziru/app/Model/Snippet.php",
+		"/Applications/MAMP/htdocs/tonziru/app/webroot/css/bootstrap.css",
+		"/Applications/MAMP/htdocs/tonziru/app/webroot/css/bootstrap.min.css",
+		"/Applications/MAMP/htdocs/tonziru/app/Config/routes.php",
+		"/Applications/MAMP/htdocs/tonziru/app/View/Elements/menu.ctp",
+		"/Applications/MAMP/htdocs/tonziru/app/webroot/js/shCore.js",
+		"/Applications/MAMP/htdocs/tonziru/app/Controller/JsonController.php",
+		"/Applications/MAMP/htdocs/tonziru/app/View/Layouts/error.ctp",
+		"/Users/nick/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/nick/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Applications/MAMP/htdocs/tonziru/app/View/Snippets/index.ctp",
+		"/Users/nick/Downloads/dist/index.html",
+		"/Users/nick/Downloads/dist/css/typeahead.js-bootstrap.css",
+		"/Applications/MAMP/htdocs/tonziru/app/Model/Category.php",
+		"/Users/nick/Downloads/dist/css/style.css",
+		"/Users/nick/Downloads/dist/js/typeahead.min.js",
+		"/Applications/MAMP/htdocs/tonziru/app/Controller/UsersController.php",
+		"/Users/nick/Downloads/dist/js/sample.json",
+		"/Users/nick/Downloads/dist/js/typeahead.js",
+		"/Applications/MAMP/htdocs/ihav/Model/Offerskill.php",
+		"/Applications/MAMP/htdocs/ihav/Controller/SkillsController.php",
+		"/Applications/MAMP/htdocs/ihav/Controller/OffersController.php",
+		"/Applications/MAMP/htdocs/ihav/View/Offers/select.ctp",
+		"/Applications/MAMP/htdocs/ihav/View/Elements/Skill/loop.ctp",
+		"/Applications/MAMP/htdocs/ihav/Controller/OptionsController.php",
+		"/Applications/MAMP/htdocs/onesperson/app/View/Layouts/default.ctp",
+		"/Applications/MAMP/htdocs/onesperson/app/Config/bootstrap.php",
+		"/Applications/MAMP/htdocs/onesperson/app/Config/database.php",
+		"/Applications/MAMP/htdocs/onesperson/app/Controller/AppController.php",
+		"/Applications/MAMP/htdocs/ihav/View/Dashboard/watchlist.ctp",
+		"/Applications/MAMP/htdocs/ihav/Model/Question.php",
+		"/Applications/MAMP/htdocs/ihav/Model/Skill.php",
+		"/Applications/MAMP/htdocs/ihav/Model/Pref.php",
+		"/Applications/MAMP/htdocs/ihav/Controller/NeedsController.php",
+		"/Applications/MAMP/htdocs/ihav/Model/User.php",
+		"/Applications/MAMP/htdocs/purged/ajax/_ajax_update.php",
+		"/Applications/MAMP/htdocs/purged/js/ajax_process.js",
+		"/Applications/MAMP/htdocs/purged/assets/css/style.css",
+		"/Applications/MAMP/htdocs/purged/index.php",
+		"/Applications/MAMP/htdocs/ihav/app/View/Offers/index.ctp",
+		"/Applications/MAMP/htdocs/ihav/app/View/Dashboard/watchlist.ctp",
+		"/Applications/MAMP/htdocs/ihav/app/Model/Offerskill.php",
+		"/Applications/MAMP/htdocs/ihav/app/Controller/OffersController.php",
+		"/Applications/MAMP/htdocs/ihav/app/View/Elements/Skill/loop.ctp",
+		"/Applications/MAMP/htdocs/ihav/app/View/Dashboard/index.ctp",
+		"/Applications/MAMP/htdocs/ihav/Controller/SkillflowController.php",
+		"/Applications/MAMP/htdocs/ihav/Controller/DashboardController.php",
+		"/Applications/MAMP/htdocs/ihav/View/Skills/preview.ctp",
+		"/Applications/MAMP/htdocs/ihav/app/Controller/OptionsController.php",
+		"/Applications/MAMP/htdocs/ihav/database_dump/CreateSyntax.sql",
+		"/Applications/MAMP/htdocs/ihav/Controller/AppController.php",
+		"/Applications/MAMP/htdocs/ihav/app/webroot/files/4/42option.html",
+		"/Applications/MAMP/htdocs/ihav/app/webroot/files/4/43profile_touroku.html",
+		"/Applications/MAMP/htdocs/ihav/app/webroot/files/4/44preview_touroku.html",
+		"/Applications/MAMP/htdocs/ihav/app/webroot/files/4/41skillsuneed.html",
+		"/Applications/MAMP/htdocs/ihav/app/webroot/files/4/40titleonly.html",
+		"/Applications/MAMP/htdocs/ihav/app/webroot/files/4/40basicinfo.html",
+		"/Applications/MAMP/htdocs/ihav/app/webroot/files/4/45thanks_touroku.html",
+		"/Applications/MAMP/htdocs/ihav/.gitignore",
+		"/Applications/MAMP/htdocs/ihav/app/View/Elements/Dashboard/header.ctp",
+		"/Applications/MAMP/htdocs/ihav/app/Controller/WatchlistsController.php",
+		"/Applications/MAMP/htdocs/ihav/app/Controller/DashboardController.php",
+		"/Applications/MAMP/htdocs/ihav/View/Elements/Skill/content.ctp",
+		"/Applications/MAMP/htdocs/ihav/app/View/Dashboard/reviews.ctp",
+		"/Users/nick/Documents/index.php",
+		"/Applications/MAMP/htdocs/ihav/app/Config/database.php",
+		"/Applications/MAMP/htdocs/ihav/database_dump/insert_value_1031.sql",
+		"/Applications/MAMP/htdocs/ihav/app/View/Elements/Skill/content.ctp",
+		"/Applications/MAMP/htdocs/ihav/app/View/Elements/Need/content.ctp",
+		"/Applications/MAMP/htdocs/ihav/app/View/Elements/local_header.ctp",
+		"/Users/nick/Dropbox/MAMP/htdocs/ihav/app/View/Options/add.ctp",
+		"/Applications/MAMP/htdocs/ihav/app/Config/routes.php",
+		"/Applications/MAMP/htdocs/ihav/database_dump/values_dump.sql",
+		"/Applications/MAMP/htdocs/ihav/database_dump/create_table.sql",
+		"/Applications/MAMP/htdocs/ihav/app/tmp/logs/error.log",
+		"/Applications/MAMP/htdocs/ihav/app/tmp/cache/models/myapp_cake_model_default_ihav_list (nick-no-MacBook-Air の競合コピー 2013-10-28)",
+		"/Applications/MAMP/htdocs/ihav/app/tmp/cache/models/myapp_cake_model_default_ihav_list",
+		"/Applications/MAMP/htdocs/ihav/View/Layouts/default.ctp",
+		"/Applications/MAMP/htdocs/ihav/app/Model/Need.php",
+		"/Applications/MAMP/htdocs/ihav/app/Controller/NeedOptionsController.php",
+		"/Applications/MAMP/htdocs/ihav/app/Model/NeedOption.php",
+		"/Applications/MAMP/htdocs/ihav/app/Model/Skill.php",
+		"/Applications/MAMP/htdocs/ihav/app/View/Needs/index.ctp",
+		"/Applications/MAMP/htdocs/ihav/app/View/Elements/header.ctp",
+		"/Applications/MAMP/htdocs/ihav/app/View/Elements/empty",
+		"/Applications/MAMP/htdocs/ihav/app/View/Layouts/default.ctp",
+		"/Applications/MAMP/htdocs/ihav/app/View/Skills/preview.ctp",
+		"/Applications/MAMP/htdocs/ihav/app/View/NeedOptions/add.ctp",
+		"/Applications/MAMP/htdocs/ihav/app/View/Needs/add.ctp",
+		"/Applications/MAMP/htdocs/ihav/database_dump/dump_file.sql",
+		"/Applications/MAMP/htdocs/ihav/app/Config/email.php.default"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"app/Config/route.php",
+			"~/ihav/app/Config/route.php",
+			"app/Config/route.php",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"name",
+			"'\n",
+			"pre",
+			"body",
+			"#linker",
+			".attr",
+			"attr",
+			"GL.title",
+			".conta",
+			"conta",
+			"div",
+			"dataLen",
+			"	\n",
+			"/>\n",
+			"		\n",
+			"twitter-typeahead",
+			"twitter-typeahear",
+			"twitter",
+			"ta",
+			"img",
+			"DESC",
+			"viewers",
+			"view",
+			"viewr",
+			"viewrs",
+			"preview",
+			"');?>\n",
+			"content",
+			"ul3",
+			"need_options",
+			"14",
+			"skill_id",
+			"preview",
+			"box"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"options"
+		],
+		"reverse": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"ihav/.gitignore"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 1036.0,
+		"selected_items":
+		[
+		],
+		"width": 1862.0
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 290.0,
+	"status_bar_visible": true
+}

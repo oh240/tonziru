@@ -17,14 +17,6 @@ class JsonController extends AppController {
 
 
 	public function all() {
-	/*
-		$options = array(
-			'limit'=>10
-		);
-
-		$this->set('snippets', $this->Snippet->find('all',$options));
-    $this->set('_serialize', array('snippets'));
-   */
   
   	$this->Paginator->settings = array(
   	/*
@@ -48,6 +40,10 @@ class JsonController extends AppController {
 	public function search() {
 		 $this->set('snippets', $this->Snippet->find('all'));
      $this->set('_serialize', array('snippets'));
+	}
+	
+	public function category() {
+		
 	}
 
 }

@@ -1,15 +1,24 @@
 $(function() {
   var GL = {};
   var page = 1;
+	var max = 0;
   $.getJSON("http://localhost:8888/tonziru/json/all/page:1" , function(data) {
-    var snippet_cnt = data['snippet_cnt'];
+   
     ViewRender(data);
 
-      var Ne = '<button class="btn btn-default Next">'+
-                'Next'+
-              '</button>';
+		var maxPage = max / 10 ;
+		var pageLimit = Math.ceil(maxPage);
 
-      $('.nexDiv').append(Ne);
+		if(page < maxPage) {
+				 
+	  	var Ne = '<button class="btn btn-default Next">'+
+	                 'Next'+
+	               '</button>';
+
+	   	$('.nexDiv').append(Ne);
+				 
+		}
+		
   });
 
   function ViewRender(data){
@@ -17,8 +26,9 @@ $(function() {
     $('.snippetTitle').text('');
     $('.goods').text('');
     $('.bats').text('');
-    
+    　
     var dataLen = data['snippets'].length;
+		
     GL.jsdata = data['snippets'];
     GL.title = data['snippets'][0]['Snippet']['title'];
     GL.body = data['snippets'][0]['Snippet']['body'];
@@ -26,6 +36,7 @@ $(function() {
     GL.goods = data['snippets'][0]['Snippet']['goods'];
     GL.id = data['snippets'][0]['Snippet']['id'];
     GL.category = data['snippets'][0]['Category']['name'];
+		max = data['snippet_cnt'];
     
     if (GL.category == 'others') {
       $('pre').addClass("brush: css");
@@ -37,12 +48,11 @@ $(function() {
 
     $('.snippetTitle').append(GL.title);
     $('pre').text(GL.body);
-    //$('pre').append(GL.body);
-
+		/*
     $('.bats').append("Bat ... "+GL.bats+' <span class="glyphicon glyphicon-thumbs-down"></span>');
 
     $('.goods').append("Good ! "+GL.goods+' <span class="glyphicon glyphicon-thumbs-up"></span>');
-
+		*/
     for (i=0;i<dataLen;i++) {
         GL.id = data['snippets'][i]['Snippet']['id'];
         GL.category = data['snippets'][i]['Category']['name'];
@@ -104,8 +114,6 @@ $(function() {
     
     $('pre').html(GL.body);
 
-    //$('pre').append(GL.body);
-
     $('pre').each(function() {
       SyntaxHighlighter.highlight(SyntaxHighlighter.defaults, this);
     });
@@ -120,93 +128,79 @@ $(function() {
   });
 
   $(document).on('click','.Next',function(){
-    page++;
-
-    if (50 >= page * 10) {
+		
+		var maxPage = max / 10 ;
+		
+		var pageLimit = Math.ceil(maxPage);
+		
+    if (page < pageLimit) {
+			page++;
+			
        URL = "http://localhost:8888/tonziru/json/all/page:"+page;
-    } else {
-      page--;
+
+       $('.preDiv').text('');
+       $('.nexDiv').text('');
+
+			 
+       var Pe = '<button class="btn btn-default Prev">'+
+                 'Prev'+
+               '</button>';
+							 
+			 if(page < maxPage) {
+				 
+	       var Ne = '<button class="btn btn-default Next">'+
+	                 'Next'+
+	               '</button>';
+
+	       $('.nexDiv').append(Ne);
+				 
+			 }
+
+       $('.preDiv').append(Pe);
+			 
     }
 
     $.getJSON(URL, function(data) {
       $('.list-group').text('');
       ViewRender(data);
     });
-
-    var viewCnt = page * 10;
-
-    if (50 > viewCnt) {
-
-      $('.preDiv').text('');
-      $('.nexDiv').text('');
-
-      var Pe = '<button class="btn btn-default Prev">'+
-                'Prev'+
-              '</button>';
-
-      var Ne = '<button class="btn btn-default Next">'+
-                'Next'+
-              '</button>';
-
-      $('.preDiv').append(Pe);
-      $('.nexDiv').append(Ne);
-       
-    } else {
-      $('.preDiv').text('');
-      $('.nexDiv').text('');
-
-      var Pe = '<button class="btn btn-default Prev">'+
-                'Prev'+
-              '</button>';
-
-      $('.preDiv').append(Pe);
-    }
 
   });
 
 
   $(document).on('click','.Prev',function(){
 
-    page--;
-
-    if (page > 0) {
+    if (page > 1) {
+			
+			page--;
+			
        URL = "http://localhost:8888/tonziru/json/all/page:"+page;
-    } else {
-      page++;
-    }
 
+       $('.preDiv').text('');
+       $('.nexDiv').text('');
+
+			 var Ne = '<button class="btn btn-default Next">'+
+			           'Next'+
+			          '</button>';
+								
+			$('.nexDiv').append(Ne);
+							 
+			 if(page > 1) {
+				 
+	       var Pe = '<button class="btn btn-default Prev">'+
+	                 'Prev'+
+	               '</button>';
+
+				 $('.preDiv').append(Pe);
+				 
+			 }
+
+    }
+		
     $.getJSON(URL, function(data) {
       $('.list-group').text('');
       ViewRender(data);
     });
-
-    if (page > 1) {
-
-      $('.preDiv').text('');
-      $('.nexDiv').text('');
-
-      var Pe = '<button class="btn btn-default Prev">'+
-                'Prev'+
-              '</button>';
-
-      var Ne = '<button class="btn btn-default Next">'+
-                'Next'+
-              '</button>';
-
-      $('.preDiv').append(Pe);
-      $('.nexDiv').append(Ne);
-    
-    } else {
-
-      $('.preDiv').text('');
-      $('.nexDiv').text('');
-
-      var Ne = '<button class="btn btn-default Next">'+
-                'Next'+
-              '</button>';
-
-      $('.nexDiv').append(Ne);
-    }
 
   });
 

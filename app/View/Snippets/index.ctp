@@ -49,6 +49,7 @@
 			<div class="codeArea">
 				<pre class="code"></pre>
 			</div>
+			<!--
 			<hr>
 			<div class="pull-right">
 				<button class="btn btn-success">
@@ -61,6 +62,7 @@
 				</button>
 			</div>
 			<div class="clearfix"></div>
+				-->
 		</div>
 	</div>
 	<div class="clearfix"></div>
