@@ -32,6 +32,25 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
-  public $components = array('DebugKit.Toolbar','Session'); // この行を追加
+  //public $components = array('DebugKit.Toolbar','Session','Auth'); // この行を追加
+	public $components = array(
+			'Auth' => array(
+				'authenticate' => array(
+					'all' => array(
+						'fields' => array(
+							'username' => 'facebook_id',
+							'password' => 'password'
+						),
+					),
+					'Form' => array(),
+				),
+			),
+			'Session',
+			'DebugKit.Toolbar'
+		);
+		function beforeFilter(){
+		  Security::setHash('sha256');
+			$this->Auth->allow();
+		}
 	public $uses = array('User','Snippet','Category');
 }

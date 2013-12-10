@@ -37,6 +37,7 @@ class UsersController extends AppController {
 	
 	public function logout(){
 		$this->Auth->logout();
+		return $this->redirect('/users/login');
 	}
 	
 	public function index(){
@@ -81,9 +82,9 @@ class UsersController extends AppController {
 			}
 			
 			$this->redirect('/snippets/');
-  	}
+  	}	
 	}
-	/*
+
 	private function logincheck($user = null) {
     
 		if ($this->Auth->login($user)) {
@@ -94,6 +95,6 @@ class UsersController extends AppController {
       $this->redirect('add');
     }
 	}
-	*/
+	
 }
 

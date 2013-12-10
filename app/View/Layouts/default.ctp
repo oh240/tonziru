@@ -17,15 +17,18 @@
 	 <link href="css/typeahead.js-bootstrap.css" media="screen" rel="stylesheet" type="text/css" />
 </head>
 <body>
-	<header>
-		<h1 class="text-center">
-			Tonziru
-		</h1>
-	</header>
-	 <?php echo $this->fetch('content'); ?>
-	 <footer>
-	 	<hr>
-	 </footer>
+	<?php echo $this->element('menubar');?>
+	<div id="main">
+		<header>
+			<h1 class="text-center">
+				Tonziru
+			</h1>
+		</header>
+		 	<?php echo $this->fetch('content'); ?>
+		 <footer>
+		 	<hr>
+		 </footer>
+	</div>
 	 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	 <?php
 	  	echo $this->Html->script('shCore',array('inline'=>'false'));
