@@ -21,9 +21,15 @@ class SnippetsController extends AppController {
  * @return void
  */
 	public function index() {
-		$this->set('title_for_layout', 'トップ画面');
-		$categories = $this->Category->find('all');
-		$this->set(compact('categories'));
+		
+		if ($this->Session->read('Auth.User.id')) {
+			$this->set('title_for_layout', 'トップ画面');
+			$categories = $this->Category->find('all');
+			$this->set(compact('categories'));
+		} else {
+			$this->Auth->logout();
+			return $this->redirect('/users/login');
+		}
 	}
 /**
  * add method

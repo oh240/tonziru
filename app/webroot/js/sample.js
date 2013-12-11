@@ -3,7 +3,7 @@ $(function() {
   var page = 1;
 	var max = 0;
 	
-	var URL = 'http://localhost:8888/tonziru/json/all';
+	var URL = 'http://webuilder240.com/project/tonziru/json/all';
 	
   $.getJSON(URL, function(data) {
    
@@ -50,7 +50,7 @@ $(function() {
 	      $('pre').addClass("brush: "+GL.category);
 	    }
 
-	    $("#linker").attr("href", "http://localhost:8888/tonziru/snippets/edit/"+GL.id);
+	    $("#linker").attr("href", "http://webuilder240.com/project/tonziru/snippets/edit/"+GL.id);
 
 	    $('.snippetTitle').append(GL.title);
 	    $('pre').text(GL.body);
@@ -110,7 +110,7 @@ $(function() {
     GL.goods = GL.jsdata[GL.ren]['Snippet']['goods'];
     GL.bats = GL.jsdata[GL.ren]['Snippet']['bats'];
     GL.category = GL.jsdata[GL.ren]['Category']['name'];
-    $("#linker").attr("href", "http://localhost:8888/tonziru/snippets/edit/"+GL.id);
+    $("#linker").attr("href", "http://webuilder240.com/project/tonziru/snippets/edit/"+GL.id);
 		
     $(".list-group-item").removeClass('active');
     
@@ -229,7 +229,7 @@ $(function() {
     $('.preDiv').text('');
     $('.nexDiv').text('');
 	
-		URL = 'http://localhost:8888/tonziru/json/category/'+id;
+		URL = 'http://webuilder240.com/project/tonziru/json/category/'+id;
     $.getJSON(URL, function(data) {
       $('.list-group').text('');
       ViewRender(data);
@@ -256,7 +256,7 @@ $(function() {
     $('.preDiv').text('');
     $('.nexDiv').text('');
 	
-		URL = 'http://localhost:8888/tonziru/json/all/';
+		URL = 'http://webuilder240.com/project/tonziru/json/all/';
     $.getJSON(URL, function(data) {
       $('.list-group').text('');
       ViewRender(data);
@@ -285,7 +285,7 @@ $(function() {
 		$('.nav').children().removeClass('active');
 		$(this).parent().addClass('active');
 		
-		URL = 'http://localhost:8888/tonziru/json/search/'+word;
+		URL = 'http://webuilder240.com/project/tonziru/json/search/'+word;
     $.getJSON(URL, function(data) {
       $('.list-group').text('');
       ViewRender(data);
