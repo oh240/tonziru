@@ -45,8 +45,7 @@ class AppController extends Controller {
 					'Form' => array(),
 				),
 			),
-			'Session',
-			'DebugKit.Toolbar'
+			'Session'
 		);
 		function beforeFilter(){
 		  Security::setHash('sha256');
