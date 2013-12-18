@@ -120,10 +120,9 @@ CakePlugin::load('Opauth', array('routes' => true, 'bootstrap' => true));
  */ 
 Configure::write('Opauth.Strategy.Facebook', array(
 'app_id' => '510530838968620',
-'app_secret' => 'efc24f3b0d8f10008b0bee3df6b38b23'
+'app_secret' => 'efc24f3b0d8f10008b0bee3df6b38b23',
+'scope' => 'email,user_birthday'
 ));
-
-
 
 /**
  * 認証用のURL設定
