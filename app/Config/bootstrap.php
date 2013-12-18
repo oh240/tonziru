@@ -123,6 +123,8 @@ Configure::write('Opauth.Strategy.Facebook', array(
 'app_secret' => 'efc24f3b0d8f10008b0bee3df6b38b23'
 ));
 
+
+
 /**
  * 認証用のURL設定
  */

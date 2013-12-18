@@ -4,3 +4,8 @@
  */
 Router::connect('/auth/callback', array('plugin' => 'Opauth', 'controller' => 'Opauth', 'action' => 'callback'));
 Router::connect('/auth/*', array('plugin' => 'Opauth', 'controller' => 'Opauth', 'action' => 'index'));
+
+Router::connect(
+       '/opauth-complete/*', 
+       array('controller' => 'users', 'action' => 'opauth_complete')
+ );
