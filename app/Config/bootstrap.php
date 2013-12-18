@@ -126,4 +126,4 @@ Configure::write('Opauth.Strategy.Facebook', array(
 /**
  * 認証用のURL設定
  */
-Configure::write('Opauth.path', '/tonziru/auth/');
+Configure::write('Opauth.path', '/project/tonziru/auth/');
